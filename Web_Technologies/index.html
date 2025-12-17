@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Employee Management</h1>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                <li><a href="#employees" class="nav-link">Employees</a></li>
+                <li><a href="#reports" class="nav-link">Reports</a></li>
+                <li><a href="#settings" class="nav-link">Settings</a></li>
+            </ul>
+            <div class="user-info">
+                <span class="username">Admin User</span>
+                <button class="btn-logout">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="container">
+                <h2 class="section-title">Dashboard Overview</h2>
+                
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card card-blue">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="totalEmployees">0</h3>
+                            <p class="stat-label">Total Employees</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card card-green">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="totalProjects">0</h3>
+                            <p class="stat-label">Active Projects</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card card-orange">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="avgSalary">$0</h3>
+                            <p class="stat-label">Average Salary</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card card-purple">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-info">
+                            <h3 class="stat-number" id="totalDepts">0</h3>
+                            <p class="stat-label">Departments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Employees by Department</h3>
+                        <canvas id="departmentChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3>Salary Distribution</h3>
+                        <canvas id="salaryChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activityList">
+                        <!-- Activities will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employees Section -->
+        <section id="employees" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Employee Management</h2>
+                    <button class="btn btn-primary" id="btnAddEmployee">
+                        <span class="btn-icon">➕</span> Add Employee
+                    </button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="filter-section">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search employees..." class="form-input">
+                        <button class="btn btn-secondary" id="btnSearch">Search</button>
+                    </div>
+                    
+                    <div class="filter-controls">
+                        <select id="filterDepartment" class="form-select">
+                            <option value="">All Departments</option>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Operations">Operations</option>
+                        </select>
+                        
+                        <select id="sortBy" class="form-select">
+                            <option value="name">Sort by Name</option>
+                            <option value="salary">Sort by Salary</option>
+                            <option value="hireDate">Sort by Hire Date</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Employee Table -->
+                <div class="table-container">
+                    <table class="data-table" id="employeeTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Salary</th>
+                                <th>Hire Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeeTableBody">
+                            <!-- Table rows populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <button class="btn-page" id="btnPrevPage">← Previous</button>
+                    <span class="page-info" id="pageInfo">Page 1 of 1</span>
+                    <button class="btn-page" id="btnNextPage">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports" class="section">
+            <div class="container">
+                <h2 class="section-title">Reports & Analytics</h2>
+                
+                <div class="report-grid">
+                    <div class="report-card">
+                        <h3>Department Summary</h3>
+                        <div id="departmentReport" class="report-content">
+                            <!-- Report content populated by JavaScript -->
+                        </div>
+                        <button class="btn btn-secondary btn-export">Export to PDF</button>
+                    </div>
+                    
+                    <div class="report-card">
+                        <h3>Salary Analysis</h3>
+                        <div id="salaryReport" class="report-content">
+                            <!-- Report content populated by JavaScript -->
+                        </div>
+                        <button class="btn btn-secondary btn-export">Export to Excel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Add/Edit Employee -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add New Employee</h3>
+                <span class="close">&times;</span>
+            </div>
+            
+            <form id="employeeForm" class="modal-body">
+                <div class="form-group">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department*</label>
+                    <select id="department" class="form-select" required>
+                        <option value="">Select Department</option>
+                        <option value="IT">IT</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="salary">Salary*</label>
+                    <input type="number" id="salary" class="form-input" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hireDate">Hire Date*</label>
+                    <input type="date" id="hireDate" class="form-input" required>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Employee</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span class="toast-message"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
