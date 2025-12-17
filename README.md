@@ -12,6 +12,7 @@ This repository demonstrates proficiency in programming, database management, we
 analyst_1_req/
 ├── CSharp_ADO_NET/          # C# with ADO.NET database programming
 ├── Python_Examples/         # Python data analysis and database connectivity
+├── OOP_Examples/            # Object-Oriented Programming fundamentals & patterns
 ├── SQL_Database/            # SQL Server scripts, stored procedures, optimization
 ├── Web_Technologies/        # HTML, CSS, JavaScript web application
 ├── API_Development/         # RESTful API with Flask
@@ -126,27 +127,33 @@ analyst_1_req/
    - Learn database connectivity with pyodbc
    - Create data analysis scripts
 
-4. **Web Technologies** → `Web_Technologies/`
+4. **Object-Oriented Programming** → `OOP_Examples/`
+   - Study OOP fundamentals (classes, inheritance, polymorphism)
+   - Learn design patterns (Factory, Singleton, Observer, etc.)
+   - Master SOLID principles
+   - Practice code organization
+
+5. **Web Technologies** → `Web_Technologies/`
    - Study HTML structure and semantics
    - Practice CSS layouts (Flexbox, Grid)
    - Implement JavaScript interactivity
    - Build responsive designs
 
 ### Week 5-6: API & Advanced Topics
-5. **API Development** → `API_Development/`
+6. **API Development** → `API_Development/`
    - Understand RESTful principles
    - Build API endpoints with Flask
    - Practice request/response handling
    - Test APIs comprehensively
 
-6. **AI/ML Concepts** → `AI_ML_Examples/`
+7. **AI/ML Concepts** → `AI_ML_Examples/`
    - Learn machine learning basics
    - Practice with Scikit-learn
    - Understand model evaluation
    - Explore AI applications
 
 ### Week 7: Version Control & Best Practices
-7. **Git Workflow** → `Git_Workflow/`
+8. **Git Workflow** → `Git_Workflow/`
    - Master Git commands
    - Practice branching strategies
    - Learn collaboration workflows
@@ -158,9 +165,16 @@ analyst_1_req/
 
 ### Programming Languages
 - ✅ **C#** - Object-oriented programming, ADO.NET
-- ✅ **Python** - Data analysis, scripting, API development
+- ✅ **Python** - Data analysis, scripting, API development, OOP
 - ✅ **SQL** - Complex queries, stored procedures, optimization
 - ✅ **JavaScript** - DOM manipulation, event handling, async operations
+
+### Object-Oriented Programming
+- ✅ Classes, objects, and encapsulation
+- ✅ Inheritance and polymorphism
+- ✅ Abstraction and composition
+- ✅ Design patterns (Factory, Singleton, Observer, Strategy, etc.)
+- ✅ SOLID principles
 
 ### Database Skills
 - ✅ Database design and normalization
@@ -210,12 +224,17 @@ This project helps you prepare for:
 - Explain CRUD operations with ADO.NET
 - Describe SQL query optimization techniques
 - Discuss RESTful API design principles
-- Explain machine learning model evaluation
+- Explain OOP principles (encapsulation, inheritance, polymorphism)
+- Describe design patterns and when to use them
+- Explain SOLID principles
+- Discuss machine learning model evaluation
 - Demonstrate Git workflow knowledge
 
 ### Coding Challenges
 - Write SQL queries with joins and aggregations
 - Implement data analysis with Pandas
+- Create classes with proper encapsulation
+- Apply design patterns to solve problems
 - Create API endpoints
 - Build responsive UI components
 - Debug and optimize code
@@ -223,6 +242,7 @@ This project helps you prepare for:
 ### System Design
 - Database schema design
 - API architecture
+- Object-oriented system modeling
 - Web application structure
 - Data pipeline design
 
@@ -240,6 +260,8 @@ This project helps you prepare for:
 - [Python Documentation](https://docs.python.org/3/)
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [Scikit-learn Documentation](https://scikit-learn.org/)
+- [Design Patterns](https://refactoring.guru/design-patterns)
+- [Clean Code by Robert C. Martin](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 
 ### Web Development
 - [MDN Web Docs](https://developer.mozilla.org/)

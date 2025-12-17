@@ -1,0 +1,12 @@
+# OOP Examples - Python Requirements
+# No external dependencies required for core OOP concepts
+# Standard library only
+
+# Optional: For enhanced type checking during development
+# mypy>=1.0.0
+
+# Optional: For code quality checks
+# pylint>=2.15.0
+# flake8>=6.0.0
+
+# Python 3.7+ required
